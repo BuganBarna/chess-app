@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-font-size: 18;" stylesheets="@../darkOrWhite.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chess.gui.ChessController">
+    <center>
+        <GridPane fx:id="grid" prefHeight="308.0" prefWidth="500.0" style="-fx-background-color: #E0E0E0;" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+        </GridPane>
+    </center>
+    <right>
+        <VBox alignment="CENTER" spacing="20.0" style="-fx-font-size: 150%;" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets left="20.0" />
+            </BorderPane.margin>
+            <children>
+                <Label text="Time:" />
+                <Label fx:id="stopwatchLabel" text="00:00:00">
+                    <VBox.margin>
+                        <Insets bottom="20.0" />
+                    </VBox.margin>
+                </Label>
+                <Label text="Steps:" />
+                <Label fx:id="stepsLabel" text="0" />
+            </children>
+        </VBox>
+    </right>
+    <bottom>
+        <HBox alignment="CENTER" prefHeight="39.0" prefWidth="524.0" spacing="20.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="resetButton" focusTraversable="false" mnemonicParsing="false" onAction="#handleResetButton" text="Reset" />
+                <Button fx:id="FinishButton" focusTraversable="false" mnemonicParsing="false" onAction="#handleFinishButton" text="Finish" />
+            </children>
+            <BorderPane.margin>
+                <Insets top="20.0" />
+            </BorderPane.margin>
+        </HBox>
+    </bottom>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <top>
+        <Label fx:id="messageLabel" style="-fx-font-size: 150%;" text="Label" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets bottom="20.0" />
+            </BorderPane.margin>
+        </Label>
+    </top>
+</BorderPane>
